@@ -85,6 +85,7 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        // send user to the ForgotPasswordFragment upon tap of the text view
         forgot_password_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
