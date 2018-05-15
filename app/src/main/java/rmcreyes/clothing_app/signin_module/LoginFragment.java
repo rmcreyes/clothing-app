@@ -1,6 +1,7 @@
 package rmcreyes.clothing_app.signin_module;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import rmcreyes.clothing_app.R;
+import rmcreyes.clothing_app.feed_module.FeedActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -76,6 +78,9 @@ public class LoginFragment extends Fragment {
                 else if(email_input.equals("test") && password_input.equals("test")){
                     error_messages.setVisibility(View.INVISIBLE);
                     progressBar.setVisibility(View.VISIBLE);
+
+                    Intent login = new Intent(getContext(), FeedActivity.class);
+                    startActivity(login);
                 }
                 else {
                     error_messages.setText("invalid email-password combination");
