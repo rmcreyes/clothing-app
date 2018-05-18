@@ -1,7 +1,5 @@
 package rmcreyes.clothing_app.feed_module;
 
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -12,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import rmcreyes.clothing_app.R;
 
@@ -48,6 +45,9 @@ public class FeedActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(pagerAdapter);
 
+        // allow the trending button and following button to manipulate
+        // the state of the viewpager, and change its drawable resource
+        // to indicate the change on the tabs
         trending_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +66,8 @@ public class FeedActivity extends AppCompatActivity {
             }
         });
 
+        // add a page change listener to the viewpager so the tabs react to swipe
+        // gestures when changing tabs
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
