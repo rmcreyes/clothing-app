@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/nav_item_0"
-        android:title="Item 0" />
+    <item android:id="@+id/nav_my_profile"
+        android:title="My Profile" />
 
-    <item android:id="@+id/nav_item_1"
-        android:title="Item 1" />
+    <item android:id="@+id/nav_settings"
+        android:title="Settings" />
 
-    <item android:id="@+id/nav_item_2"
-        android:title="Item 2" />
-
-    <item android:id="@+id/nav_item_3"
-        android:title="Item 3" />
-
-    <item android:id="@+id/nav_item_4"
-        android:title="Item 4" />
+    <item android:id="@+id/nav_logout"
+        android:title="Logout" />
 
 
 </menu>
