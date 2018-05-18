@@ -1,5 +1,6 @@
 package rmcreyes.clothing_app.feed_module;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -19,7 +20,7 @@ public class FeedActivity extends AppCompatActivity {
     private Toolbar search_bar;
     private FeedCollectionPagerAdapter pagerAdapter;
     private ViewPager viewPager;
-    private ImageButton trending_btn, following_btn;
+    private TabLayout tab_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,7 @@ public class FeedActivity extends AppCompatActivity {
 
         drawerLayout= findViewById(R.id.drawer_layout);
         search_bar = findViewById(R.id.search_bar);
-        trending_btn = findViewById(R.id.trending_btn);
-        following_btn = findViewById(R.id.following_btn);
+        tab_bar = findViewById(R.id.tab_bar);
 
         // set up drawer button
         setSupportActionBar(search_bar);
@@ -44,53 +44,11 @@ public class FeedActivity extends AppCompatActivity {
         pagerAdapter = new FeedCollectionPagerAdapter(getSupportFragmentManager());
         viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(pagerAdapter);
+        tab_bar.setupWithViewPager(viewPager);
 
-        // allow the trending button and following button to manipulate
-        // the state of the viewpager, and change its drawable resource
-        // to indicate the change on the tabs
-        trending_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                trending_btn.setBackgroundResource(R.drawable.ic_fire_prime);
-                following_btn.setBackgroundResource(R.drawable.ic_follow_white);
-                viewPager.setCurrentItem(0);
-            }
-        });
+        tab_bar.getTabAt(0).setIcon(R.drawable.ic_fire_prime);
+        tab_bar.getTabAt(1).setIcon(R.drawable.ic_follow_prime);
 
-        following_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                trending_btn.setBackgroundResource(R.drawable.ic_fire_white);
-                following_btn.setBackgroundResource(R.drawable.ic_follow_prime);
-                viewPager.setCurrentItem(1);
-            }
-        });
-
-        // add a page change listener to the viewpager so the tabs react to swipe
-        // gestures when changing tabs
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if(position == 0) {
-                    trending_btn.setBackgroundResource(R.drawable.ic_fire_prime);
-                    following_btn.setBackgroundResource(R.drawable.ic_follow_white);
-                }
-                else if(position == 1) {
-                    trending_btn.setBackgroundResource(R.drawable.ic_fire_white);
-                    following_btn.setBackgroundResource(R.drawable.ic_follow_prime);
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
 
 
 

@@ -25,6 +25,7 @@ public class FeedCollectionPagerAdapter extends FragmentStatePagerAdapter {
     public FeedCollectionPagerAdapter(FragmentManager fm) {
         super(fm);
         FragmentList = new ArrayList<Fragment>();
+
         FragmentList.add(new TermsFragment());
         FragmentList.add(new ForgotPasswordFragment());
     }
@@ -37,6 +38,7 @@ public class FeedCollectionPagerAdapter extends FragmentStatePagerAdapter {
         else
             return new ForgotPasswordFragment();
     }
+
 
     @Override
     public int getCount() {
