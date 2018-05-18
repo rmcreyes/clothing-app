@@ -27,7 +27,10 @@
                 app:layout_scrollFlags="scroll|enterAlways|snap">
 
                 <EditText
+                    android:id="@+id/search_edit"
                     android:hint="Search user..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/capsule_btn"
@@ -62,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
+            app:fabSize="normal"
             android:background="@color/colorPrimary"
             android:src="@drawable/concord_icon"
             app:backgroundTint="@color/colorPrimary" />

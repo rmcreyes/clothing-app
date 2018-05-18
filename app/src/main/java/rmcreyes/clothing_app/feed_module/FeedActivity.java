@@ -8,9 +8,14 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import rmcreyes.clothing_app.R;
 
@@ -21,6 +26,7 @@ public class FeedActivity extends AppCompatActivity {
     private FeedCollectionPagerAdapter pagerAdapter;
     private ViewPager viewPager;
     private TabLayout tab_bar;
+    private EditText search_edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,7 @@ public class FeedActivity extends AppCompatActivity {
         drawerLayout= findViewById(R.id.drawer_layout);
         search_bar = findViewById(R.id.search_bar);
         tab_bar = findViewById(R.id.tab_bar);
+        search_edit = findViewById(R.id.search_edit);
 
         // set up drawer button
         setSupportActionBar(search_bar);
@@ -49,8 +56,16 @@ public class FeedActivity extends AppCompatActivity {
         tab_bar.getTabAt(0).setIcon(R.drawable.ic_fire_prime);
         tab_bar.getTabAt(1).setIcon(R.drawable.ic_follow_prime);
 
-
-
+        search_edit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    performSearch(v.getText().toString().trim());
+                    return true;
+                }
+                return false;
+            }
+        });
 
     }
 
@@ -62,5 +77,9 @@ public class FeedActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void performSearch(String username) {
+        Toast.makeText(this, username, Toast.LENGTH_SHORT).show();
     }
 }
