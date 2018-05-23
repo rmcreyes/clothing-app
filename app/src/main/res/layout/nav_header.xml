@@ -1,17 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorTabBar"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Light"
     android:orientation="vertical"
     android:gravity="bottom">
 
-    <TextView
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My header title"
-        android:textAppearance="@style/ThemeOverlay.AppCompat.Light"/>
+        android:layout_marginBottom="44dp"
+        android:layout_marginStart="16dp"
+        android:scaleX="2.5"
+        android:scaleY="2.5"
+        android:src="@drawable/ic_fire_white"
+        app:layout_constraintBottom_toTopOf="@+id/post_btn"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="60dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="username"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/post_btn"
+        app:layout_constraintStart_toEndOf="@+id/profile_pic" />
+
+    <TextView
+        android:id="@+id/like_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="LIKES"
+        android:textColor="@color/colorTextWhiteBtn"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/subscribed_to_label"
+        app:layout_constraintStart_toEndOf="@+id/subscribers_count" />
+
+    <TextView
+        android:id="@+id/post_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="POSTS"
+        android:textColor="@color/colorTextWhiteBtn"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/subscribers_label"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subscribers_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="SUBSCRIBERS"
+        android:textColor="@color/colorTextWhiteBtn"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/stripe2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subscribed_to_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="SUBSCRIBED TO"
+        android:textColor="@color/colorTextWhiteBtn"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/stripe2"
+        app:layout_constraintStart_toEndOf="@+id/subscribers_count" />
+
+    <TextView
+        android:id="@+id/post_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="9999"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/subscribers_count"
+        app:layout_constraintStart_toEndOf="@+id/subscribers_label" />
+
+    <TextView
+        android:id="@+id/like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="9999"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/subscribed_to_count"
+        app:layout_constraintStart_toEndOf="@+id/subscribed_to_label" />
+
+    <TextView
+        android:id="@+id/subscribers_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="9999"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/stripe2"
+        app:layout_constraintStart_toEndOf="@+id/subscribers_label" />
+
+    <TextView
+        android:id="@+id/subscribed_to_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="9999"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/stripe2"
+        app:layout_constraintStart_toEndOf="@+id/subscribed_to_label" />
+
+    <ImageView
+        android:id="@+id/stripe1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/stripe2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/post_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/capsule_btn"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="sans-serif-condensed"
+        android:text="post"
+        android:textColor="@color/colorTabBar"
+        app:layout_constraintBottom_toTopOf="@+id/like_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

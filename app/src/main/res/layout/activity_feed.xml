@@ -62,9 +62,9 @@
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
             app:fabSize="normal"
-            android:background="@color/colorPrimary"
-            android:src="@drawable/concord_icon"
-            app:backgroundTint="@color/colorPrimary" />
+            android:background="@color/colorTabBar"
+            android:src="@drawable/ic_concord_pink"
+            app:backgroundTint="@color/colorTabBar" />
 
     </android.support.design.widget.CoordinatorLayout>
 
