@@ -26,14 +26,14 @@ public class FeedCollectionPagerAdapter extends FragmentStatePagerAdapter {
         super(fm);
         FragmentList = new ArrayList<Fragment>();
 
-        FragmentList.add(new TermsFragment());
+        FragmentList.add(new TrendingFragment());
         FragmentList.add(new ForgotPasswordFragment());
     }
 
     @Override
     public Fragment getItem(int position) {
         if(position == 0) {
-            return new TermsFragment();
+            return new TrendingFragment();
         }
         else
             return new ForgotPasswordFragment();

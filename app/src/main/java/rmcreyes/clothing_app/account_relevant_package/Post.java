@@ -1,5 +1,8 @@
 package rmcreyes.clothing_app.account_relevant_package;
 
+import android.util.Pair;
+
+import java.net.URI;
 import java.util.List;
 
 /**
@@ -9,72 +12,32 @@ import java.util.List;
 public class Post {
 
     private int post_id, user_id, like_count, comment_count;
-    private String username, bio;
+    private String username, bio, recency;
     private List<Comment> comments;
+    private List<Integer> liker_ids;
+    private URI image, profile_pic;
+    private int[] date, time;
 
-    public Post(int post_id, int user_id, int like_count, int comment_count, String username, String bio, List<Comment> comments) {
-        this.post_id = post_id;
-        this.user_id = user_id;
-        this.like_count = like_count;
-        this.comment_count = comment_count;
+    public Post(String username, String recency, String bio) {
         this.username = username;
+        this.recency = recency;
         this.bio = bio;
-        this.comments = comments;
-    }
-
-    public int getPost_id() {
-        return post_id;
-    }
-
-    public void setPost_id(int post_id) {
-        this.post_id = post_id;
-    }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
-    public int getLike_count() {
-        return like_count;
-    }
-
-    public void setLike_count(int like_count) {
-        this.like_count = like_count;
-    }
-
-    public int getComment_count() {
-        return comment_count;
-    }
-
-    public void setComment_count(int comment_count) {
-        this.comment_count = comment_count;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getRecency() {
+        return recency;
     }
 
     public String getBio() {
         return bio;
     }
 
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
 
-    public List<Comment> getComments() {
-        return comments;
-    }
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
+
+
 }
