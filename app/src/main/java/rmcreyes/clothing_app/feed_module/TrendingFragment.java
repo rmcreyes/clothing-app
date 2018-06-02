@@ -8,7 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +42,7 @@ public class TrendingFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         Posts = new ArrayList<Post>();
 
@@ -56,5 +60,11 @@ public class TrendingFragment extends Fragment {
         TrendingPostAdapter trendingPostAdapter = new TrendingPostAdapter(getActivity().getApplicationContext(), Posts);
         ListView list_view = (ListView) view.findViewById(R.id.list_view);
         list_view.setAdapter(trendingPostAdapter);
+        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity().getApplicationContext(), Posts.get(position).getUsername(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

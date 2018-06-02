@@ -1,5 +1,8 @@
 package rmcreyes.clothing_app.feed_module;
 
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -27,6 +30,7 @@ public class FeedActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tab_bar;
     private EditText search_edit;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,7 @@ public class FeedActivity extends AppCompatActivity {
         search_bar = findViewById(R.id.search_bar);
         tab_bar = findViewById(R.id.tab_bar);
         search_edit = findViewById(R.id.search_edit);
+        fab = findViewById(R.id.fab);
 
         // set up drawer button
         setSupportActionBar(search_bar);
@@ -64,6 +69,51 @@ public class FeedActivity extends AppCompatActivity {
                     return true;
                 }
                 return false;
+            }
+        });
+
+        // set up fab to perform a concord search
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FeedActivity.this, "concord search", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // set up navigation drawer item selection
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // set item as selected to persist highlight
+                item.setChecked(true);
+                // close drawer when item is tapped
+                drawerLayout.closeDrawers();
+
+                switch(item.getItemId()) {
+                    case R.id.nav_my_profile:
+                        Toast.makeText(FeedActivity.this, "My Profile", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_bookmarks:
+                        Toast.makeText(FeedActivity.this, "Bookmarks", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_hottest:
+                        Toast.makeText(FeedActivity.this, "This Week's Hottest", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_report:
+                        Toast.makeText(FeedActivity.this, "Report a Problem", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_settings:
+                        Toast.makeText(FeedActivity.this, "Settings", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_logout:
+                        Toast.makeText(FeedActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+                item.setChecked(false);
+
+                return true;
             }
         });
 
