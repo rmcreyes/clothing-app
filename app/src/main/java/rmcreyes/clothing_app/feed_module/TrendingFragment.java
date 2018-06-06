@@ -49,16 +49,18 @@ public class TrendingFragment extends Fragment {
 
         Posts = new ArrayList<Post>();
 
-        Posts.add(new Post("rmcreyes", "1s ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("andreoiid", "20m ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("vince.gao", "300h ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("airchong", "4y ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("ilikerice", "5y ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("cpbluewhale", "11y ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("mickeyneuf", "111y ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("cjang", "1123y ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("nancyrolls", "1223y ago", "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("nancyyjiang", "9999y ago", "This is a test of the the trending fragment. Please work! :D"));
+        long test_post_time = (long) 1528267800000.0;
+
+        Posts.add(new Post("rmcreyes", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("andreoiid", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("vince.gao", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("airchong", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("ilikerice", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("cpbluewhale", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("mickeyneuf", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("cjang", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("nancyrolls", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Posts.add(new Post("nancyyjiang", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
 
         TrendingPostAdapter trendingPostAdapter = new TrendingPostAdapter(getActivity().getApplicationContext(), Posts);
         ListView list_view = (ListView) view.findViewById(R.id.list_view);
