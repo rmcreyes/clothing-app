@@ -8,6 +8,8 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.CardView;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -102,6 +104,10 @@ public class TrendingPostAdapter extends BaseAdapter {
 
         Bitmap scaled_bitmap = Bitmap.createBitmap(bitmap, 0, 0, image_width, image_height, matrix, true);
         BitmapDrawable final_image = new BitmapDrawable(scaled_bitmap);
-        img.setImageDrawable(final_image);
+        //img.setImageDrawable(final_image);
+
+        RoundedBitmapDrawable rounded_image = RoundedBitmapDrawableFactory.create(context.getResources(), scaled_bitmap);
+        rounded_image.setCornerRadius(100.0f);
+        img.setImageDrawable(rounded_image);
     }
 }
