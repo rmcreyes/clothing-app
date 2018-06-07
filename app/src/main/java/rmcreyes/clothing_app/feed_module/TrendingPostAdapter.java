@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.net.Uri;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
@@ -35,9 +36,9 @@ import rmcreyes.clothing_app.account_relevant_package.Post;
 
 public class TrendingPostAdapter extends BaseAdapter {
 
-    Context context;
-    LayoutInflater layoutInflater;
-    List<Post> posts;
+    private Context context;
+    private LayoutInflater layoutInflater;
+    private List<Post> posts;
 
     public TrendingPostAdapter(Context context, List<Post> posts) {
         this.context = context;
@@ -67,27 +68,50 @@ public class TrendingPostAdapter extends BaseAdapter {
         TextView username = (TextView) v.findViewById(R.id.username);
         TextView recency = (TextView) v.findViewById(R.id.recency);
         ImageView outfit_pic = (ImageView) v.findViewById(R.id.outfit_pic);
+        ImageView like_btn = (ImageView) v.findViewById(R.id.like_btn);
+        ImageView comment_btn = (ImageView) v.findViewById(R.id.comment_btn);
 
         Post post = posts.get(position);
 
+        // for each post, display its information on each panel in the list view
         username.setText(post.getUsername());
         recency.setText(post.getRecency());
         formatImage(outfit_pic, post.getOutfit_pic());
 
+        like_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "like", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        comment_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "comment", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return v;
     }
 
+    /**
+     * Resizes the Uri of an image to fit the screen, rounds the corners,
+     * and applies the resulting Bitmap to the ImageView
+     * @param img ImageView to apply the manipulated Bitmap to
+     * @param pic Uri whose Bitmap to is to manipulate
+     */
     private void formatImage(ImageView img, Uri pic) {
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         int screen_width = metrics.widthPixels;
-        int screen_height = metrics.heightPixels;
 
         InputStream inputStream = null;
 
         try {
             inputStream = context.getContentResolver().openInputStream(pic);
         } catch(FileNotFoundException e) {
-            e.printStackTrace();
+            // if the file is not found, leave the imageview blank
+            return;
         }
 
         Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
@@ -95,6 +119,8 @@ public class TrendingPostAdapter extends BaseAdapter {
         int image_width = bitmap.getWidth();
         int image_height = bitmap.getHeight();
 
+        // have the scaling factor be so that the image can be as tall as
+        // it is, provided its width fits on the screen
         float scale = ((float) screen_width) / image_width;
 
         Matrix matrix = new Matrix();
@@ -102,6 +128,8 @@ public class TrendingPostAdapter extends BaseAdapter {
 
         Bitmap scaled_bitmap = Bitmap.createBitmap(bitmap, 0, 0, image_width, image_height, matrix, true);
 
+        // create a rounded bitmap drawable from the previously manipulated bitmap to easily
+        // create corner radii
         RoundedBitmapDrawable rounded_image = RoundedBitmapDrawableFactory.create(context.getResources(), scaled_bitmap);
         rounded_image.setCornerRadius(100.0f);
         img.setImageDrawable(rounded_image);
