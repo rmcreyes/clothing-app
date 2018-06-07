@@ -72,8 +72,6 @@ public class TrendingPostAdapter extends BaseAdapter {
 
         username.setText(post.getUsername());
         recency.setText(post.getRecency());
-//        outfit_pic.setImageURI(null);
-//        outfit_pic.setImageURI(post.getOutfit_pic());
         formatImage(outfit_pic, post.getOutfit_pic());
 
         return v;
@@ -103,8 +101,6 @@ public class TrendingPostAdapter extends BaseAdapter {
         matrix.postScale(scale, scale);
 
         Bitmap scaled_bitmap = Bitmap.createBitmap(bitmap, 0, 0, image_width, image_height, matrix, true);
-        BitmapDrawable final_image = new BitmapDrawable(scaled_bitmap);
-        //img.setImageDrawable(final_image);
 
         RoundedBitmapDrawable rounded_image = RoundedBitmapDrawableFactory.create(context.getResources(), scaled_bitmap);
         rounded_image.setCornerRadius(100.0f);
