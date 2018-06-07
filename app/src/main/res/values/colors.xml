@@ -9,4 +9,5 @@
     <color name="colorTextError">#ff1c1c</color>
 
     <color name="colorTabBar">#232323</color>
+    <color name="colorComment">#75b1ff</color>
 </resources>
