@@ -1,5 +1,6 @@
 package rmcreyes.clothing_app.account_relevant_package;
 
+import android.net.Uri;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
@@ -14,16 +15,16 @@ public class Post {
     private String username, bio;
     private List<Comment> comments;
     private List<Integer> liker_ids;
-    private URI image, profile_pic;
+    private Uri outfit_pic, profile_pic;
     private long post_time;
 
     // temporary fields
     private String recency;
 
-    public Post(String username, long post_time, String bio) {
+    public Post(String username, long post_time, Uri outfit_pic) {
         this.username = username;
         this.post_time = post_time;
-        this.bio = bio;
+        this.outfit_pic = outfit_pic;
     }
 
     public String getUsername() {
@@ -68,6 +69,10 @@ public class Post {
 
     public String getBio() {
         return bio;
+    }
+
+    public Uri getOutfit_pic() {
+        return outfit_pic;
     }
 
 

@@ -1,6 +1,7 @@
 package rmcreyes.clothing_app.feed_module;
 
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -51,16 +52,22 @@ public class TrendingFragment extends Fragment {
 
         long test_post_time = (long) 1528267800000.0;
 
-        Posts.add(new Post("rmcreyes", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("andreoiid", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("vince.gao", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("airchong", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("ilikerice", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("cpbluewhale", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("mickeyneuf", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("cjang", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("nancyrolls", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
-        Posts.add(new Post("nancyyjiang", test_post_time, "This is a test of the the trending fragment. Please work! :D"));
+        Uri filler_image = Uri.parse("android.resource://rmcreyes.clothing_app/" + R.drawable.filler);
+        Uri square_image = Uri.parse("android.resource://rmcreyes.clothing_app/" + R.drawable.square_filler);
+        Uri long_image = Uri.parse("android.resource://rmcreyes.clothing_app/" + R.drawable.long_filler);
+        Uri wide_image = Uri.parse("android.resource://rmcreyes.clothing_app/" + R.drawable.wide_filler);
+
+
+        Posts.add(new Post("rmcreyes", test_post_time, filler_image));
+        Posts.add(new Post("andreoiid", test_post_time, square_image));
+        Posts.add(new Post("vince.gao", test_post_time, long_image));
+        Posts.add(new Post("airchong", test_post_time, wide_image));
+        Posts.add(new Post("ilikerice", test_post_time, filler_image));
+        Posts.add(new Post("cpbluewhale", test_post_time, filler_image));
+        Posts.add(new Post("mickeyneuf", test_post_time, filler_image));
+        Posts.add(new Post("cjang", test_post_time, filler_image));
+        Posts.add(new Post("nancyrolls", test_post_time, filler_image));
+        Posts.add(new Post("nancyyjiang", test_post_time, filler_image));
 
         TrendingPostAdapter trendingPostAdapter = new TrendingPostAdapter(getActivity().getApplicationContext(), Posts);
         ListView list_view = (ListView) view.findViewById(R.id.list_view);
