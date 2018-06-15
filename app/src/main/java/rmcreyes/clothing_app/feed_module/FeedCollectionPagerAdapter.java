@@ -27,7 +27,7 @@ public class FeedCollectionPagerAdapter extends FragmentStatePagerAdapter {
         FragmentList = new ArrayList<Fragment>();
 
         FragmentList.add(new TrendingFragment());
-        FragmentList.add(new ForgotPasswordFragment());
+        FragmentList.add(new FollowingFragment());
     }
 
     @Override
@@ -36,7 +36,7 @@ public class FeedCollectionPagerAdapter extends FragmentStatePagerAdapter {
             return new TrendingFragment();
         }
         else
-            return new ForgotPasswordFragment();
+            return new FollowingFragment();
     }
 
 
