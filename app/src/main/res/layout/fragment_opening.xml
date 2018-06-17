@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rmcreyes.clothing_app.signin_module.OpeningFragment"
-    android:background="@color/colorTabBar">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/title_banner"
@@ -27,7 +27,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/capsule_btn"
-        android:textColor="@color/colorTabBar"
+        android:textColor="@color/colorPrimary"
         android:text="login"
         android:fontFamily="sans-serif-condensed"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         android:background="@drawable/capsule_btn"
         android:fontFamily="sans-serif-condensed"
         android:text="sign up"
-        android:textColor="@color/colorTabBar"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

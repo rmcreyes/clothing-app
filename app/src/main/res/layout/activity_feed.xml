@@ -22,7 +22,7 @@
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorTabBar"
+                android:background="@color/colorPrimary"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_scrollFlags="scroll|enterAlways|snap">
 
@@ -45,8 +45,8 @@
                 android:id="@+id/tab_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorTabBar"
-                app:tabIndicatorColor="@color/colorPrimary" />
+                android:background="@color/colorPrimary"
+                app:tabIndicatorColor="@color/colorSecondary" />
 
         </android.support.design.widget.AppBarLayout>
         
@@ -63,9 +63,9 @@
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
             app:fabSize="normal"
-            android:background="@color/colorTabBar"
+            android:background="@color/colorPrimary"
             android:src="@drawable/ic_concord_pink"
-            app:backgroundTint="@color/colorTabBar" />
+            app:backgroundTint="@color/colorPrimary" />
 
     </android.support.design.widget.CoordinatorLayout>
 
