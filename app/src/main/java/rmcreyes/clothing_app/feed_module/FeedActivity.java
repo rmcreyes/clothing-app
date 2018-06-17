@@ -1,5 +1,6 @@
 package rmcreyes.clothing_app.feed_module;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -21,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import rmcreyes.clothing_app.R;
+import rmcreyes.clothing_app.filter_module.FilterQueryActivity;
 
 public class FeedActivity extends AppCompatActivity {
 
@@ -76,7 +78,8 @@ public class FeedActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FeedActivity.this, "concord search", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(FeedActivity.this, "concord search", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), FilterQueryActivity.class));
             }
         });
 

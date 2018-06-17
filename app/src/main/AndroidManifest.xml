@@ -22,7 +22,9 @@
         <activity
             android:name=".feed_module.FeedActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".filter_module.FilterQueryActivity"></activity>
+        <activity
+            android:name=".filter_module.FilterQueryActivity"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
     </application>
 
 </manifest>
