@@ -41,33 +41,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_0" />
-
-                <TextView
-                    android:id="@+id/color_0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_0"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_0" />
-
-                <TextView
                     android:id="@+id/tags_label_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,7 +51,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_0" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_0" />
 
                 <TextView
                     android:id="@+id/tags_0"
@@ -149,33 +122,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_1" />
-
-                <TextView
-                    android:id="@+id/color_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_1"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_1" />
-
-                <TextView
                     android:id="@+id/tags_label_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -186,7 +132,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_1" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_1" />
 
                 <TextView
                     android:id="@+id/tags_1"
@@ -257,33 +203,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_2" />
-
-                <TextView
-                    android:id="@+id/color_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_2"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_2" />
-
-                <TextView
                     android:id="@+id/tags_label_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -294,7 +213,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_2" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_2" />
 
                 <TextView
                     android:id="@+id/tags_2"
@@ -365,33 +284,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_3" />
-
-                <TextView
-                    android:id="@+id/color_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_3"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_3" />
-
-                <TextView
                     android:id="@+id/tags_label_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -402,7 +294,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_3" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_3" />
 
                 <TextView
                     android:id="@+id/tags_3"
@@ -473,33 +365,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_4" />
-
-                <TextView
-                    android:id="@+id/color_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_4"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_4" />
-
-                <TextView
                     android:id="@+id/tags_label_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -510,7 +375,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_4" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_4" />
 
                 <TextView
                     android:id="@+id/tags_4"
@@ -581,33 +446,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_5" />
-
-                <TextView
-                    android:id="@+id/color_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_5"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_5" />
-
-                <TextView
                     android:id="@+id/tags_label_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -618,7 +456,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_5" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_5" />
 
                 <TextView
                     android:id="@+id/tags_5"
@@ -689,33 +527,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_6" />
-
-                <TextView
-                    android:id="@+id/color_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_6"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_6" />
-
-                <TextView
                     android:id="@+id/tags_label_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -726,7 +537,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_6" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_6" />
 
                 <TextView
                     android:id="@+id/tags_6"
@@ -797,33 +608,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_7" />
-
-                <TextView
-                    android:id="@+id/color_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_7"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_7" />
-
-                <TextView
                     android:id="@+id/tags_label_7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -834,7 +618,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_7" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_7" />
 
                 <TextView
                     android:id="@+id/tags_7"
@@ -905,33 +689,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_8" />
-
-                <TextView
-                    android:id="@+id/color_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_8"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_8" />
-
-                <TextView
                     android:id="@+id/tags_label_8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -942,7 +699,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_8" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_8" />
 
                 <TextView
                     android:id="@+id/tags_8"
@@ -1013,33 +770,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/color_label_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color:"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_9" />
-
-                <TextView
-                    android:id="@+id/color_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="color"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toEndOf="@+id/color_label_9"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name_9" />
-
-                <TextView
                     android:id="@+id/tags_label_9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -1050,7 +780,7 @@
                     android:text="tags:"
                     android:textSize="18dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/color_label_9" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_name_9" />
 
                 <TextView
                     android:id="@+id/tags_9"

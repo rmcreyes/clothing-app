@@ -17,16 +17,14 @@ public class ItemCard {
 
     private CardView cardView;
     private ConstraintLayout constraintLayout;
-    private TextView item_name, color_label, color, tags_label, tags;
+    private TextView item_name, tags_label, tags;
     private View divider;
     private ImageView remove_btn;
 
-    public ItemCard(CardView cardView, ConstraintLayout constraintLayout, TextView item_name, TextView color_label, TextView color, TextView tags_label, TextView tags, View divider, ImageView remove_btn) {
+    public ItemCard(CardView cardView, ConstraintLayout constraintLayout, TextView item_name, TextView tags_label, TextView tags, View divider, ImageView remove_btn) {
         this.cardView = cardView;
         this.constraintLayout = constraintLayout;
         this.item_name = item_name;
-        this.color_label = color_label;
-        this.color = color;
         this.tags_label = tags_label;
         this.tags = tags;
         this.divider = divider;
@@ -43,8 +41,6 @@ public class ItemCard {
         cardView.setVisibility(visibility);
         constraintLayout.setVisibility(visibility);
         item_name.setVisibility(visibility);
-        color_label.setVisibility(visibility);
-        color.setVisibility(visibility);
         tags_label.setVisibility(visibility);
         tags.setVisibility(visibility);
         divider.setVisibility(visibility);
