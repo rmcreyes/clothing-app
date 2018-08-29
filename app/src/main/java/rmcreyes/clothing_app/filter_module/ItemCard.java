@@ -47,6 +47,12 @@ public class ItemCard {
         remove_btn.setVisibility(visibility);
     }
 
+    public void adaptToItem(String s_item, String s_tags) {
+        item_name.setText(s_item);
+        tags.setText(s_tags);
+
+    }
+
     public ImageView getRemove_btn() {
         return remove_btn;
     }

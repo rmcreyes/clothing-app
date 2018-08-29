@@ -16,7 +16,7 @@ import java.util.List;
 
 import rmcreyes.clothing_app.R;
 
-public class FilterQueryActivity extends AppCompatActivity {
+public class FilterQueryActivity extends AppCompatActivity implements ItemFilterDialog.ItemFilterDialogListener {
 
     private List<ItemCard> ItemCards;
     private HashMap<ImageView, ItemCard> RemovePairs;
@@ -49,11 +49,7 @@ public class FilterQueryActivity extends AppCompatActivity {
         add_filter_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemCards.get(count).setVisibility(View.VISIBLE);
-                count++;
-
-                if(count == ItemCards.size())
-                    add_filter_btn.setVisibility(View.GONE);
+                openDialog();
                 }
         });
 
@@ -71,6 +67,31 @@ public class FilterQueryActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    /**
+     * Opens a dialog that allows the user to add an item to filter with.
+     */
+    private void openDialog() {
+        ItemFilterDialog itemFilterDialog = new ItemFilterDialog();
+        itemFilterDialog.show(getSupportFragmentManager(), "item filter dialog");
+    }
+
+    /**
+     * Upon click of positive button in dialog, adds an item card to the view
+     * with the item type and tags specified by the user in the dialog
+     * @param item_type - string referring to the type of item to filter with
+     * @param tags - string referring to the words describing the item
+     */
+    // TODO: 2018-08-28 handle case where no item is selected 
+    @Override
+    public void applyTexts(String item_type, String tags) {
+        ItemCards.get(count).setVisibility(View.VISIBLE);
+        ItemCards.get(count).adaptToItem(item_type, tags);
+        count++;
+
+        if(count == ItemCards.size())
+            add_filter_btn.setVisibility(View.GONE);
     }
 
     /**

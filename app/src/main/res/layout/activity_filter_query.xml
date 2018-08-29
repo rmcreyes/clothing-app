@@ -65,6 +65,8 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags, tags"
                     android:textSize="14dp"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tags_label_0" />
