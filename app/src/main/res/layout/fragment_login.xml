@@ -19,6 +19,7 @@
 
     <EditText
         android:id="@+id/email_edit"
+        android:maxLines="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -36,6 +37,7 @@
 
     <EditText
         android:id="@+id/password_edit"
+        android:maxLines="1"
         android:background="@android:drawable/edit_text"
         android:textColor="@android:color/primary_text_light"
         android:layout_width="wrap_content"
@@ -72,7 +74,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/capsule_btn"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/colorSecondary"
         android:fontFamily="sans-serif-condensed"
         android:text="login"
         android:textColor="@android:color/white"

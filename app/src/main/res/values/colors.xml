@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffbe7c</color>
+    <color name="colorPrimary">#232323</color>
     <color name="colorPrimaryDark">#cc843b</color>
+    <color name="colorSecondary">#ffbe7c</color>
     <color name="colorAccent">#fff780</color>
 
     <!--text colors-->
     <color name="colorTextWhiteBtn">#969595</color>
     <color name="colorTextError">#ff1c1c</color>
 
-    <color name="colorTabBar">#232323</color>
+    <!--icon colors-->
+    <color name="colorComment">#75b1ff</color>
 </resources>
